@@ -1,0 +1,9 @@
+[Unit]
+Description=ImageServer for images processing.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/fmurillom/Documents/TEC/Operativos/Tarea_1/InitServ.sh
+
+[Install]
+WantedBy=multi-user.target

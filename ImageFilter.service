@@ -1,0 +1,9 @@
+[Unit]
+Description=ImageFilter for images processing.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/fmurillom/Documents/TEC/Operativos/Tarea_1/InitFilter.sh
+
+[Install]
+WantedBy=multi-user.target
