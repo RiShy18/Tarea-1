@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tarea 1 Operativos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</head> 
+    <body ng-controller="FileUploadController">
+        <div class="jumbotron" style="margin-bottom: 0px; border-radius: 0px">
+            <h1 style="color:#37b4a7; text-align: center;"><span style="color: #390284; font-weight: bold;">Tarea 1
+            </span>Principio de Sistemas Operativos</h1>
+        </div>
+       <div class="container" ng-upload style="margin-top:20px">
+           <div class="row">
+               <div class="col-sm-8">
+                <form action="http://ecf0da31.ngrok.io/upload" method="post" enctype="multipart/form-data">
+                    <div>
+                        Select image to upload:
+                        <input type="file" name="fileToUpload" class="form-control" accept="image/*" id="fileToUpload" required>
+                    </div>
+                    <input type="submit" class="btn btn-dark" value="Upload Image" style="background-color: #37b4a7;" name="submit">
+                  </form>
+               </div>
+           </div>
+       </div>
+    </body>
