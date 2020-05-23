@@ -3,10 +3,14 @@ import { View, Text, Image, Button } from 'react-native'
 import ImagePicker from 'react-native-image-picker'
 
 export default class App extends React.Component {
+
+  // Component state
   state = {
     photo: null,
   }
 
+
+  // Function for photo gallery
   handleChoosePhoto = () => {
     const options = {
       noData: true,
@@ -18,6 +22,8 @@ export default class App extends React.Component {
     })
   }
 
+
+  // Function for http post 
   handleUploadPhoto = () => {
     fetch("http://ecf0da31.ngrok.io/upload", {
       method: "POST",
@@ -36,6 +42,7 @@ export default class App extends React.Component {
       });
   };
 
+  // GUI render
   render() {
     const { photo } = this.state
     return (
@@ -55,6 +62,8 @@ export default class App extends React.Component {
   }
 }
 
+
+// FormData create function
 const createFormData = (photo) => {
   const data = new FormData();
 
